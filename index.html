@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gafari Animation | Stickman animation studio</title>
+<meta name="description" content="Gafari Animation makes stickman videos for YouTube channels, brands and games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top" aria-label="Gafari Animation, home">
+      <svg viewBox="0 0 32 40" width="24" height="30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="16" cy="7" r="5"/>
+        <path d="M16 12v13M16 16l-8 6M16 16l9 4M16 25l-7 12M16 25l8 12"/>
+      </svg>
+      <span>Gafari Animation</span>
+    </a>
+    <nav id="menu" class="links" aria-label="Main">
+      <a href="#fight-scene">Fight scene</a>
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a class="only-mobile" href="#contact">Start a project</a>
+    </nav>
+    <a class="btn btn-accent small nav-cta" href="#contact">Start a project</a>
+    <button class="chip menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title">Stick figures.<br>Serious stories.</h1>
+      <div class="hero-row">
+        <p class="lead">Gafari Animation makes stickman videos for YouTube channels, brands and games. We draw and time every frame, from script to final export.</p>
+        <div class="cta">
+          <a class="btn btn-accent" href="#contact">Start a project</a>
+          <a class="btn btn-line" href="#fight-scene">Watch the 10-second fight</a>
+        </div>
+      </div>
+
+      <canvas id="stage" role="img" aria-label="An animated stick figure standing on a line. Click the stage to make him walk there, or use the buttons below to make him wave, jump, backflip, punch or dance."></canvas>
+      <div class="timeline" aria-hidden="true">
+        <div class="ticks"></div>
+        <div class="ticks-major"></div>
+        <div class="playhead" id="playhead"><span id="frameNo">frame 2400</span></div>
+      </div>
+      <div class="controls">
+        <span class="hand">Your turn. Click the stage to send him somewhere, or pick a move.</span>
+        <button class="chip" type="button" data-act="wave">Wave</button>
+        <button class="chip" type="button" data-act="jump">Jump</button>
+        <button class="chip" type="button" data-act="backflip">Backflip</button>
+        <button class="chip" type="button" data-act="punch">Punch</button>
+        <button class="chip" type="button" data-act="dance">Dance</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec fight" id="fight-scene" aria-labelledby="fight-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="fight-title">A 10-second fight scene</h2>
+        <p>Cut the way anime fights are cut: freeze frames on impact, speed lines, afterimages and a camera that shakes. Hit play, or drag the bar to scrub through it.</p>
+      </div>
+      <div class="player">
+        <canvas id="fight" role="img" aria-label="A ten second stickman fight. A cyan stick figure and a pink stick figure charge, clash, trade blows in the air, and the cyan one wins with a slash and a knockout."></canvas>
+        <div class="player-bar">
+          <button class="chip" id="fightPlay" type="button">Play</button>
+          <input id="fightScrub" type="range" min="0" max="1000" value="0" aria-label="Scrub through the fight scene">
+          <span class="time" id="fightTime">0:00 / 0:10</span>
+        </div>
+      </div>
+      <ul class="beats">
+        <li><strong>Impact freeze</strong><span>The picture holds for a beat when a punch lands.</span></li>
+        <li><strong>Afterimage dashes</strong><span>Fast moves leave ghost copies behind them.</span></li>
+        <li><strong>Smear trails</strong><span>Kicks and punches streak so you can read the arc.</span></li>
+        <li><strong>Camera shake and zoom</strong><span>The frame punches in and rattles on every big hit.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="work" aria-labelledby="work-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="work-title">Recent shorts</h2>
+        <p>Four loops from the studio. Every one is animated frame by frame, so the timing does the acting.</p>
+      </div>
+      <div class="reel">
+        <article class="card c7">
+          <canvas class="shot" data-scene="chase" role="img" aria-label="Looping animation: a stick figure sprints along a rooftop while a red stick figure chases him"></canvas>
+          <div class="card-meta"><h3>Rooftop Chase</h3><p>42 seconds, action comedy</p></div>
+        </article>
+        <article class="card c5 stagger">
+          <canvas class="shot" data-scene="fall" role="img" aria-label="Looping animation: a stick figure tumbles through the air with his arms flailing"></canvas>
+          <div class="card-meta"><h3>The Long Fall</h3><p>28 seconds, game trailer</p></div>
+        </article>
+        <article class="card c5">
+          <canvas class="shot" data-scene="duel" role="img" aria-label="Looping animation: two stick figures trade punches over a coffee mug"></canvas>
+          <div class="card-meta"><h3>Coffee Duel</h3><p>1 minute 10 seconds, brand explainer</p></div>
+        </article>
+        <article class="card c7 stagger">
+          <canvas class="shot" data-scene="dance" role="img" aria-label="Looping animation: a stick figure dances while music notes float up"></canvas>
+          <div class="card-meta"><h3>Dance Break</h3><p>15 seconds, social loop</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="services" style="padding-top:0" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="services-title">What we make</h2>
+        <p>Tell us where the video will live and how long it should run. We work out the rest.</p>
+      </div>
+      <ul class="services">
+        <li>
+          <h3>YouTube stickman series</h3>
+          <p>Full episodes from your script: character design, animation, sound and export in YouTube-ready files.</p>
+          <span class="len">2 to 12 minutes</span>
+        </li>
+        <li>
+          <h3>Explainers for brands</h3>
+          <p>A short, funny video that shows what your product does in words your customers already use.</p>
+          <span class="len">30 to 90 seconds</span>
+        </li>
+        <li>
+          <h3>Game trailers and cutscenes</h3>
+          <p>Fight scenes, chases and story beats for indie games, mods and Roblox showcases.</p>
+          <span class="len">20 seconds to 3 minutes</span>
+        </li>
+        <li>
+          <h3>Social loops and reactions</h3>
+          <p>Vertical clips and looping gags made for TikTok, Reels and Shorts.</p>
+          <span class="len">5 to 30 seconds</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec process" id="process" aria-labelledby="process-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="process-title">How a video gets made</h2>
+        <p>Six stages, in this order. You see and approve the work at each one before we move on.</p>
+      </div>
+      <ol class="strip">
+        <li><canvas data-step="0" role="img" aria-label="Stick figure with hand at chin, thinking"></canvas><h3><span class="n">1</span>Script</h3><p>We tighten your idea into beats and jokes, timed to the second.</p></li>
+        <li><canvas data-step="1" role="img" aria-label="Stick figure pointing ahead"></canvas><h3><span class="n">2</span>Storyboard</h3><p>Rough sketches of every shot, so you see the story before we animate it.</p></li>
+        <li><canvas data-step="2" role="img" aria-label="Stick figure walking"></canvas><h3><span class="n">3</span>Animatic</h3><p>The storyboard cut together with a scratch voice track to lock the timing.</p></li>
+        <li><canvas data-step="3" role="img" aria-label="Stick figure running"></canvas><h3><span class="n">4</span>Animation</h3><p>Characters, movement and effects drawn frame by frame.</p></li>
+        <li><canvas data-step="4" role="img" aria-label="Stick figure mid backflip"></canvas><h3><span class="n">5</span>Sound</h3><p>Sound effects, music and voice mixed to the picture.</p></li>
+        <li><canvas data-step="5" role="img" aria-label="Stick figure celebrating with arms up"></canvas><h3><span class="n">6</span>Delivery</h3><p>Final files for YouTube, social and your archive, plus a round of fixes.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="contact-title">Got a story? Send us the rough idea.</h2>
+        <p class="intro">Tell us what the video is for, how long it should run and when you need it. A sentence is enough to start.</p>
+      </div>
+      <form id="brief" novalidate>
+        <label>Your name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>What are we making?
+          <select name="type">
+            <option>YouTube stickman series</option>
+            <option>Explainer for a brand</option>
+            <option>Game trailer or cutscene</option>
+            <option>Social loops and reactions</option>
+            <option>Not sure yet</option>
+          </select>
+        </label>
+        <label>The idea
+          <textarea name="message" required></textarea>
+        </label>
+        <button class="btn btn-accent" type="submit">Send brief</button>
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Gafari Animation</span>
+    <span>Every frame drawn by hand.</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
